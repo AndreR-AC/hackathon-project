@@ -1,16 +1,16 @@
 package org.academiadecodigo.bitjs.whereisthelove.controller;
 
 
+import org.academiadecodigo.bitjs.whereisthelove.dtos.ProtestDto;
+import org.academiadecodigo.bitjs.whereisthelove.dtos.UserDto;
 import org.academiadecodigo.bitjs.whereisthelove.persistence.model.Protest;
 import org.academiadecodigo.bitjs.whereisthelove.services.ProtestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 
@@ -25,6 +25,14 @@ public class RestProtestController {
 
         return new ResponseEntity<>(protestService.listProtests(), HttpStatus.OK);
 
+    }
+
+    @PostMapping(path = {"","/"})
+    public ResponseEntity createNewProtest(@Valid @RequestBody ProtestDto protestDto){
+
+        //protestService.create;
+
+        return new ResponseEntity(HttpStatus.OK);
     }
 
     @GetMapping( path = "/{id}")

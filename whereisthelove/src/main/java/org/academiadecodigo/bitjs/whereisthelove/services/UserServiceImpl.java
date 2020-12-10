@@ -3,6 +3,7 @@ package org.academiadecodigo.bitjs.whereisthelove.services;
 import org.academiadecodigo.bitjs.whereisthelove.persistence.daos.ProtestDao;
 import org.academiadecodigo.bitjs.whereisthelove.persistence.daos.UserDao;
 import org.academiadecodigo.bitjs.whereisthelove.persistence.model.User;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -43,6 +44,7 @@ public class UserServiceImpl implements UserService {
         return userDao;
     }
 
+    @Autowired
     public void setUserDao(UserDao userDao) {
         this.userDao = userDao;
     }
@@ -51,6 +53,7 @@ public class UserServiceImpl implements UserService {
         return protestDao;
     }
 
+    @Autowired
     public void setProtestDao(ProtestDao protestDao) {
         this.protestDao = protestDao;
     }
