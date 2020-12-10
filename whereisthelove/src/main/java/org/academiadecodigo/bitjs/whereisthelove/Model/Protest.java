@@ -1,4 +1,4 @@
-package org.academiadecodigo.bitjs.whereisthelove.mocks;
+package org.academiadecodigo.bitjs.whereisthelove.Model;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -26,49 +26,60 @@ public class Protest {
     private List<User> supporters= new ArrayList<>();
 
 
-  public Date getDate() {
-      return date;
-    }
-    public void setDate(Date date) {
-      this.date = date;
-    }
-    public String getCause() {
-      return cause;
-    }
-    public void setCause(String cause) {
-      this.cause = cause;
-    }
-    public String getLocation() {
-      return location;
-    }
-    public void setLocation(String location) {
-      this.location = location;
-    }
-    public String getOrg() {
-      return org;
-    }
-    public void setOrg(String org) {
-      this.org = org;
-    }
-    public Integer getLovePoints() {
-      return lovePoints;
-    }
-    public void setLovePoints(Integer lovePoints) {
-      this.lovePoints = lovePoints;
-    }
-    public List<User> getSupporters() {
-      return supporters;
-    }
-    public void setSupporters(List<User> supporters) {
-      this.supporters = supporters;
+    public Date getDate() {
+        return date;
     }
 
-  public void setId(Integer id) {
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
+    public String getCause() {
+        return cause;
+    }
+
+    public void setCause(String cause) {
+        this.cause = cause;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
+    public String getOrg() {
+        return org;
+    }
+
+    public void setOrg(String org) {
+        this.org = org;
+    }
+
+    public Integer getLovePoints() {
+        return lovePoints;
+    }
+
+    public void setLovePoints(Integer lovePoints) {
+        this.lovePoints = lovePoints;
+    }
+
+    public List<User> getSupporters() {
+        return supporters;
+    }
+
+    public void setSupporters(List<User> supporters) {
+        this.supporters = supporters;
+    }
+
+    public void setId(Integer id) {
     this.id = id;
   }
 
-  @Id
-  public Integer getId() {
+    @Id
+    public Integer getId() {
     return id;
   }
 }
