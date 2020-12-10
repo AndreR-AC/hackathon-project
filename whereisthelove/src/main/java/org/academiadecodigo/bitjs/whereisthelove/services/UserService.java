@@ -1,6 +1,8 @@
 package org.academiadecodigo.bitjs.whereisthelove.services;
 
-import org.academiadecodigo.bitjs.whereisthelove.Model.User;
+
+import org.academiadecodigo.bitjs.whereisthelove.persistence.model.Protest;
+import org.academiadecodigo.bitjs.whereisthelove.persistence.model.User;
 
 import java.util.List;
 
@@ -12,4 +14,6 @@ public interface UserService {
     List<User> listUsers();
 
     void addProtestToUser(Integer supporterId, Integer protestId);
+
+    User getUserById(Integer id);
 }

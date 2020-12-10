@@ -25,6 +25,9 @@ public class Protest {
     )
     private List<User> supporters= new ArrayList<>();
 
+    public void addSupporter(User user){
+        supporters.add(user);
+    }
 
   public Date getDate() {
       return date;

@@ -34,9 +34,6 @@ public class RestProtestController {
     }
 
 
-
-
-
     public ProtestService getProtestService() {
         return protestService;
     }

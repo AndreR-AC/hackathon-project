@@ -25,6 +25,9 @@ public class User {
   )
   private List<Protest> protests = new ArrayList<>();
 
+  public void addProtest(Protest protest){
+    protests.add(protest);
+  }
 
   public void setId(Integer id) {
     this.id = id;
@@ -71,4 +74,6 @@ public class User {
   public List<Protest> getProtests() {
     return protests;
   }
+
+
 }
