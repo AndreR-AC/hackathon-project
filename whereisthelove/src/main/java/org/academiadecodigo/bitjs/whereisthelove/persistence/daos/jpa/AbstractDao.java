@@ -1,7 +1,6 @@
 package org.academiadecodigo.bitjs.whereisthelove.persistence.daos.jpa;
 
 import org.academiadecodigo.bitjs.whereisthelove.persistence.daos.Dao;
-import org.academiadecodigo.bitjs.whereisthelove.persistence.model.Model;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -9,7 +8,7 @@ import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 import java.util.List;
 
-public abstract class AbstractDao <T extends Model>  implements Dao<T> {
+public abstract class AbstractDao <T>  implements Dao<T> {
 
   protected Class<T> modelType;
 
@@ -56,9 +55,7 @@ public abstract class AbstractDao <T extends Model>  implements Dao<T> {
     return em.find(modelType, id);
   }
 
-  /**
-   * @see Dao#saveOrUpdate(Model)
-   */
+
   @Override
   public T saveOrUpdate(T modelObject) {
     return em.merge(modelObject);
