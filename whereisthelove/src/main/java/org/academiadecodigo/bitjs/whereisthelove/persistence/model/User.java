@@ -1,5 +1,7 @@
-package org.academiadecodigo.bitjs.whereisthelove.mocks;
+package org.academiadecodigo.bitjs.whereisthelove.persistence.model;
 
+
+import org.academiadecodigo.bitjs.whereisthelove.persistence.model.Protest;
 
 import javax.persistence.*;
 import java.util.ArrayList;

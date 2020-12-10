@@ -1,10 +1,8 @@
 package org.academiadecodigo.bitjs.whereisthelove.persistence.daos;
 
-import org.academiadecodigo.bitjs.whereisthelove.persistence.model.Model;
-
 import java.util.List;
 
-public interface Dao<T extends Model> {
+public interface Dao<T> {
 
   /**
    * Gets a list of the model type
