@@ -21,7 +21,7 @@ public class UserDto {
   @NotBlank(message = "Last name must not be blank")
   private String lastName;
 
-  
+
   @NotNull(message = "Birthdate is mandatory")
   @NotBlank(message = "Birthdate must not be blank")
 
