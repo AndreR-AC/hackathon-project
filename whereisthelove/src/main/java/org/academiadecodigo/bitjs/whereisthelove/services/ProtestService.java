@@ -1,6 +1,7 @@
 package org.academiadecodigo.bitjs.whereisthelove.services;
 
-import org.academiadecodigo.bitjs.whereisthelove.Model.Protest;
+
+import org.academiadecodigo.bitjs.whereisthelove.persistence.model.Protest;
 
 import java.util.List;
 

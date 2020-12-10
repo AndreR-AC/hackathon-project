@@ -1,6 +1,7 @@
 package org.academiadecodigo.bitjs.whereisthelove.controller;
 
-import org.academiadecodigo.bitjs.whereisthelove.Model.Protest;
+
+import org.academiadecodigo.bitjs.whereisthelove.persistence.model.Protest;
 import org.academiadecodigo.bitjs.whereisthelove.services.ProtestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

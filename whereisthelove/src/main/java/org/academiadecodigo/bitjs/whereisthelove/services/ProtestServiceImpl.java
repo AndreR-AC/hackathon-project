@@ -1,7 +1,8 @@
 package org.academiadecodigo.bitjs.whereisthelove.services;
 
-import org.academiadecodigo.bitjs.whereisthelove.Model.Protest;
+
 import org.academiadecodigo.bitjs.whereisthelove.persistence.daos.ProtestDao;
+import org.academiadecodigo.bitjs.whereisthelove.persistence.model.Protest;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
