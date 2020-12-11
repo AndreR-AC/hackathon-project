@@ -8,26 +8,22 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-@Entity
-@Table(name = "user")
+
 public class User {
 
-  @Id
+
   private Integer id;
   private String firstName;
   private String lastName;
-  private Date birthdate;
+  private String birthdate;
   private Integer lovePoints;
 
-  @ManyToMany(
-    fetch = FetchType.EAGER
 
-  )
-  private List<Protest> protests = new ArrayList<>();
+//  private List<Protest> protests = new ArrayList<>();
 
-  public void addProtest(Protest protest){
+  /*public void addProtest(Protest protest){
     protests.add(protest);
-  }
+  }*/
 
   public void setId(Integer id) {
     this.id = id;
@@ -55,11 +51,11 @@ public class User {
     this.lastName = lastName;
   }
 
-  public Date getBirthdate() {
+  public String getBirthdate() {
     return birthdate;
   }
 
-  public void setBirthdate(Date birthdate) {
+  public void setBirthdate(String birthdate) {
     this.birthdate = birthdate;
   }
 
@@ -71,9 +67,9 @@ public class User {
     this.lovePoints = lovePoints;
   }
 
-  public List<Protest> getProtests() {
+  /*public List<Protest> getProtests() {
     return protests;
   }
 
-
+*/
 }

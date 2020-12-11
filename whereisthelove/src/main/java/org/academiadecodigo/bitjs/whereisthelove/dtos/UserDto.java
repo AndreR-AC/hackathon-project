@@ -5,6 +5,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.util.Date;
 
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
@@ -23,9 +24,8 @@ public class UserDto {
 
 
   @NotNull(message = "Birthdate is mandatory")
-  @NotBlank(message = "Birthdate must not be blank")
-
-  private Date birthdate;
+  @Size(min = 8,max = 10)
+  private String birthdate;
 
 
   private Integer lovePoints;
@@ -54,11 +54,12 @@ public class UserDto {
     this.lastName = lastName;
   }
 
-  public Date getBirthdate() {
+
+  public String getBirthdate() {
     return birthdate;
   }
 
-  public void setBirthdate(Date birthdate) {
+  public void setBirthdate(String birthdate) {
     this.birthdate = birthdate;
   }
 

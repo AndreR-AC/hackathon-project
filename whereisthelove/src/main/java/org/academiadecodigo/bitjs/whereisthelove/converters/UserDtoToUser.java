@@ -11,6 +11,7 @@ public class UserDtoToUser extends AbstractConverter<UserDto, User> {
   public User convert(UserDto userDto) {
 
     User user = new User();
+    user.setId(userDto.getId());
     user.setFirstName(userDto.getFirstName());
     user.setLastName(userDto.getLastName());
     user.setBirthdate(userDto.getBirthdate());

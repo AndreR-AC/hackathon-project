@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.util.Date;
 
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
@@ -11,9 +12,11 @@ public class ProtestDto {
 
   private Integer id;
 
+  private String imageUrl;
+
   @NotNull(message = "Protest date is mandatory")
-  @NotBlank(message = "Protest date must not be blank")
-  private Date date;
+  @Size(min = 8,max = 10)
+  private String date;
 
   @NotNull(message = "Cause is mandatory")
   @NotBlank(message = "Cause must not be blank")
@@ -36,11 +39,11 @@ public class ProtestDto {
     this.id = id;
   }
 
-  public Date getDate() {
+  public String getDate() {
     return date;
   }
 
-  public void setDate(Date date) {
+  public void setDate(String date) {
     this.date = date;
   }
 
@@ -74,5 +77,13 @@ public class ProtestDto {
 
   public void setLovePoints(Integer lovePoints) {
     this.lovePoints = lovePoints;
+  }
+
+  public String getImageUrl() {
+    return imageUrl;
+  }
+
+  public void setImageUrl(String imageUrl) {
+    this.imageUrl = imageUrl;
   }
 }

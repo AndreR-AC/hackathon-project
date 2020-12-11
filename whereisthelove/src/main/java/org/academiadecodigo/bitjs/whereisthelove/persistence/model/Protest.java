@@ -3,37 +3,34 @@ package org.academiadecodigo.bitjs.whereisthelove.persistence.model;
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.LinkedList;
 import java.util.List;
 
 
-@Entity
-@Table(name = "protest")
+
 public class Protest {
 
-  @Id
-  private Integer id;
 
-  private Date date;
+  private Integer id;
+  private String imageUrl;
+  private String date;
   private String cause;
   private String location = null;
   private String org;
   private Integer lovePoints;
 
-  @ManyToMany(
-    mappedBy = "users",
-    fetch = FetchType.LAZY
-  )
-  private List<User> supporters = new ArrayList<>();
 
-    public void addSupporter(User user){
+//  private List<User> supporters = new LinkedList<>();
+
+/*  public void addSupporter(User user){
         supporters.add(user);
-    }
+    }*/
 
-  public Date getDate() {
+  public String getDate() {
     return date;
   }
 
-  public void setDate(Date date) {
+  public void setDate(String date) {
     this.date = date;
   }
 
@@ -69,19 +66,19 @@ public class Protest {
     this.lovePoints = lovePoints;
   }
 
-  public List<User> getSupporters() {
-    return supporters;
+  public String getImageUrl() {
+    return imageUrl;
   }
 
-  public void setSupporters(List<User> supporters) {
-    this.supporters = supporters;
+  public void setImageUrl(String imageUrl) {
+    this.imageUrl = imageUrl;
   }
 
   public void setId(Integer id) {
     this.id = id;
   }
 
-  @Id
+
   public Integer getId() {
     return id;
   }
