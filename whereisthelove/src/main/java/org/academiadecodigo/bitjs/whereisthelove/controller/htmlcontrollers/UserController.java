@@ -2,12 +2,9 @@ package org.academiadecodigo.bitjs.whereisthelove.controller.htmlcontrollers;
 
 import org.academiadecodigo.bitjs.whereisthelove.controller.RestUserController;
 import org.academiadecodigo.bitjs.whereisthelove.converters.UserDtoToUser;
-import org.academiadecodigo.bitjs.whereisthelove.dtos.ProtestDto;
 import org.academiadecodigo.bitjs.whereisthelove.dtos.UserDto;
 import org.academiadecodigo.bitjs.whereisthelove.persistence.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -39,7 +36,7 @@ public class UserController {
         restUserController.updatelist();
         redirectAttributes.addFlashAttribute("lastAction", "Saved " + userDto.getFirstName() + " " + userDto.getLastName());
 
-        return "redirect:/index";
+        return "index";
     }
     public void updatelist(){
         userLinkedList = restUserController.getUserLinkedList();

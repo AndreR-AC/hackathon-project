@@ -5,13 +5,10 @@ import org.academiadecodigo.bitjs.whereisthelove.converters.ProtestDtoToProtest;
 import org.academiadecodigo.bitjs.whereisthelove.dtos.ProtestDto;
 import org.academiadecodigo.bitjs.whereisthelove.persistence.model.Protest;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
@@ -38,7 +35,7 @@ public class ProtestController {
         restProtestController.updateList();
 
         redirectAttributes.addFlashAttribute("lastAction", "Saved " + protestDto.getCause() + " contributing to " + protestDto.getOrg());
-        return "redirect:index";
+        return "index";
     }
 
     public LinkedList<Protest> getProtestList() {

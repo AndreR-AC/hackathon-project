@@ -17,6 +17,7 @@ public class User {
   private String lastName;
   private String birthdate;
   private Integer lovePoints;
+  private String passwordHash;
 
 
 //  private List<Protest> protests = new ArrayList<>();
@@ -72,4 +73,12 @@ public class User {
   }
 
 */
+
+  public String getPasswordHash() {
+    return passwordHash;
+  }
+
+  public void setPasswordHash(String passwordHash) {
+    this.passwordHash = passwordHash;
+  }
 }

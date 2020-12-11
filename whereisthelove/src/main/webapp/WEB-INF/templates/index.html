@@ -2,203 +2,886 @@
 <html class="no-js" lang="">
 
 <head>
-    <meta charset="utf-8">
-    <title></title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <meta property="og:title" content="">
-    <meta property="og:type" content="">
-    <meta property="og:url" content="">
-    <meta property="og:image" content="">
+  <meta charset="utf-8" />
+  
+  <meta name="description" content="'where is love', a crowdfunding/virtual protest site" />
+  <meta name="authors" content="Andre, Pereira, Paim, Queimado"/>
+  <meta name="keywords" content="protests, covid-19, crowdfunding, merchandise" />
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
 
-    <link rel="manifest" href="site.webmanifest">
-    <link rel="apple-touch-icon" href="icon.png">
-    <!-- Place favicon.ico in the root directory -->
+  <title>Where is the Love?</title>
 
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/main.css">
+  <!--<meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 
-    <meta name="theme-color" content="#fafafa">
-    <title>Simple registration form</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
-          integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
-    <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js">
-    </script>
-    <style>
-        html, body {
-            display: flex;
-            justify-content: center;
-            height: 100%;
-        }
 
-        body, div, h1, form, input, p {
-            padding: 0;
-            margin: 0;
-            outline: none;
-            font-family: Roboto, Arial, sans-serif;
-            font-size: 16px;
-            color: #666;
-        }
+  <!-- Place favicon.ico in the root directory -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 
-        h1 {
-            padding: 10px 0;
-            font-size: 32px;
-            font-weight: 300;
-            text-align: center;
-        }
+  <style>
+    /*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
 
-        p {
-            font-size: 12px;
-        }
+    /* main.css 2.1.0 | MIT License | https://github.com/h5bp/main.css#readme */
+    /*
+     * What follows is the result of much research on cross-browser styling.
+     * Kroc Camen, and the H5BP dev community and team.
+     */
 
-        hr {
-            color: #a9a9a9;
-            opacity: 0.3;
-        }
+    /* ==========================================================================
+       Base styles: opinionated defaults
+       ========================================================================== */
 
-        .main-block {
-            max-width: 340px;
-            min-height: 460px;
-            padding: 10px 0;
-            margin: auto;
-            border-radius: 5px;
-            border: solid 1px #ccc;
-            box-shadow: 1px 2px 5px rgba(0, 0, 0, .31);
-            background: #ebebeb;
-        }
+    html {
+      background-color: cornsilk;
+      color: #222;
+      font-size: 1em;
+      line-height: 1.4;
+    }
 
-        form {
-            margin: 0 30px;
-        }
+    .center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
 
-        .account-type, .gender {
-            margin: 15px 0;
-        }
+    /*h1 {
+      display: block;
+      text-align: center;
+      font-size: 450%;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      color: dimgrey;
+    }*/
 
-        input[type=radio] {
-            display: none;
-        }
+    div {
+      position: absolute;
+      top: 80px;
+      left: 90px;
+      color: white;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 100px;
+    }
 
-        label#icon {
-            margin: 0;
-            border-radius: 5px 0 0 5px;
-        }
+    .top {
+      position: absolute;
+      top: 80px;
+      right: 90px;
 
-        label.radio {
-            position: relative;
-            display: inline-block;
-            padding-top: 4px;
-            margin-right: 20px;
-            text-indent: 30px;
-            overflow: visible;
-            cursor: pointer;
-        }
+    }
 
-        label.radio:before {
-            content: "";
-            position: absolute;
-            top: 2px;
-            left: 0;
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            background: #1c87c9;
-        }
+    /*Este representa a posição d barra na pagina*/
+    nav {
+      display: block;
+      text-align: center;
+    }
 
-        label.radio:after {
-            content: "";
-            position: absolute;
-            width: 9px;
-            height: 4px;
-            top: 8px;
-            left: 4px;
-            border: 3px solid #fff;
-            border-top: none;
-            border-right: none;
-            transform: rotate(-45deg);
-            opacity: 0;
-        }
+    nav ul {
+      margin: 0;
+      padding:0;
+      list-style: none;
+    }
 
-        input[type=radio]:checked + label:after {
-            opacity: 1;
-        }
 
-        input[type=text], input[type=password] {
-            width: calc(100% - 57px);
-            height: 36px;
-            margin: 13px 0 0 -5px;
-            padding-left: 10px;
-            border-radius: 0 5px 5px 0;
-            border: solid 1px #cbc9c9;
-            box-shadow: 1px 2px 5px rgba(0, 0, 0, .09);
-            background: #fff;
-        }
 
-        input[type=password] {
-            margin-bottom: 15px;
-        }
+    .nav a {
+      display: block;
+      background:no-repeat;
+      color:black;
+      text-decoration: none;
+      padding: 0.8em 2.8em;
+      text-transform: uppercase;
+      font-size: 80%;
+      letter-spacing: 0.5px;
+      position: relative;
+    }
 
-        #icon {
-            display: inline-block;
-            padding: 9.3px 15px;
-            box-shadow: 1px 2px 5px rgba(0, 0, 0, .09);
-            background: #1c87c9;
-            color: #fff;
-            text-align: center;
-        }
 
-        .btn-block {
-            margin-top: 10px;
-            text-align: center;
-        }
+    .nav{
+      vertical-align: top;
+      display: inline-block;
 
-        button {
-            width: 100%;
-            padding: 10px 0;
-            margin: 10px auto;
-            border-radius: 5px;
-            border: none;
-            background: #1c87c9;
-            font-size: 14px;
-            font-weight: 600;
-            color: #fff;
-        }
+      border-radius:6px;
+    }
+    .nav li {
+      position: relative;
+    }
+    .nav > li {
+      float: left;
+      border-bottom: 4px black;
+      font-size: 120%;
+      margin-right: 1px;
+    }
+    .nav > li > a {
+      margin-bottom: 1px;
 
-        button:hover {
-            background: #26a9e0;
-        }
-    </style>
+    }
+    .nav > li:hover,
+    .nav > li:hover > a {
+      border-bottom-color: black;
+    }
+    .nav li:hover > a {
+      color:red;
+      font-size: 80%;
+    }
+    .nav > li:first-child {
+      border-radius: 4px 0 0 4px;
+    }
+    .nav > li:first-child > a {
+      border-radius: 4px 0 0 0;
+    }
+    .nav > li:last-child {
+      border-radius: 0 0 4px 0;
+      margin-right: 0;
+    }
+    .nav > li:last-child > a {
+      border-radius: 0 4px 0 0;
+    }
+    .nav li li a {
+      margin-top: 1px;
+    }
+
+
+    .nav li a:first-child:nth-last-child(2):before {
+      content: "";
+      position: center;
+      height: 0;
+      width: 0;
+      border: 5px solid transparent;
+      top: 50% ;
+      right:5px;
+    }
+
+
+    .nav ul {
+      position: absolute;
+      white-space: nowrap;
+      border-bottom: 5px solid black;
+      z-index: 1;
+      left: -99999em;
+    }
+    .nav > li:hover > ul {
+      left: auto;
+      margin-top: 5px;
+      min-width: 100%;
+    }
+    .nav > li li:hover > ul {
+      left: 100%;
+      margin-left: 1px;
+      top: -1px;
+    }
+    /* arrow hover styling */
+    /*.nav > li > a:first-child:nth-last-child(2):before {
+      border-top-color: #aaa;
+    }*/
+    .nav > li:hover > a:first-child:nth-last-child(2):before {
+      /*border: 5px solid transparent;*/
+      /*border-bottom-color: orange;*/
+      margin-top:-5px
+    }
+    .nav li li > a:first-child:nth-last-child(2):before {
+      border-left-color: #aaa;
+      margin-top: -5px
+    }
+    .nav li li:hover > a:first-child:nth-last-child(2):before {
+      border: 5px solid transparent;
+      border-right-color: orange;
+      right: 10px;
+    }
+
+
+
+
+    /*.suport {
+      display: block;
+      margin-left: auto;
+      margin-right: 400px;
+      margin-top: 100px;
+      margin-bottom: 150px;
+
+    }*/
+
+
+
+
+    /*
+     * Remove text-shadow in selection highlight:
+     * https://twitter.com/miketaylr/status/12228805301
+     *
+     * Vendor-prefixed and regular ::selection selectors cannot be combined:
+     * https://stackoverflow.com/a/16982510/7133471
+     *
+     * Customize the background color to match your design.
+     */
+
+    ::-moz-selection {
+      background: #b3d4fc;
+      text-shadow: none;
+    }
+
+    ::selection {
+      background: #b3d4fc;
+      text-shadow: none;
+    }
+
+    /*
+     * A better looking default horizontal rule
+     */
+
+    hr {
+      display: block;
+      height: 1px;
+      border: 0;
+      border-top: 1px solid #ccc;
+      margin: 1em 0;
+      padding: 0;
+    }
+
+    /*
+     * Remove the gap between audio, canvas, iframes,
+     * images, videos and the bottom of their containers:
+     * https://github.com/h5bp/html5-boilerplate/issues/440
+     */
+
+    audio,
+    canvas,
+    iframe,
+    img,
+    svg,
+    video {
+      vertical-align: middle;
+    }
+
+    /*
+     * Remove default fieldset styles.
+     */
+
+    fieldset {
+      border: 0;
+      margin: 0;
+      padding: 0;
+    }
+
+    /*
+     * Allow only vertical resizing of textareas.
+     */
+
+    textarea {
+      resize: vertical;
+    }
+
+    /* ==========================================================================
+       Author's custom styles
+       ========================================================================== */
+
+    /* ==========================================================================
+       Helper classes
+       ========================================================================== */
+
+    /*
+     * Hide visually and from screen readers
+     */
+
+    .hidden,
+    [hidden] {
+      display: none !important;
+    }
+
+    /*
+     * Hide only visually, but have it available for screen readers:
+     * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+     *
+     * 1. For long content, line feeds are not interpreted as spaces and small width
+     *    causes content to wrap 1 word per line:
+     *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+     */
+
+    .sr-only {
+      border: 0;
+      clip: rect(0, 0, 0, 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      white-space: nowrap;
+      width: 1px;
+      /* 1 */
+    }
+
+    /*
+     * Extends the .sr-only class to allow the element
+     * to be focusable when navigated to via the keyboard:
+     * https://www.drupal.org/node/897638
+     */
+
+    .sr-only.focusable:active,
+    .sr-only.focusable:focus {
+      clip: auto;
+      height: auto;
+      margin: 0;
+      overflow: visible;
+      position: static;
+      white-space: inherit;
+      width: auto;
+    }
+
+    /*
+     * Hide visually and from screen readers, but maintain layout
+     */
+
+    .invisible {
+      visibility: hidden;
+    }
+
+    /*
+     * Clearfix: contain floats
+     *
+     * For modern browsers
+     * 1. The space content is one way to avoid an Opera bug when the
+     *    `contenteditable` attribute is included anywhere else in the document.
+     *    Otherwise it causes space to appear at the top and bottom of elements
+     *    that receive the `clearfix` class.
+     * 2. The use of `table` rather than `block` is only necessary if using
+     *    `:before` to contain the top-margins of child elements.
+     */
+
+    .clearfix::before,
+    .clearfix::after {
+      content: " ";
+      display: table;
+    }
+
+    .clearfix::after {
+      clear: both;
+    }
+
+    /* ==========================================================================
+       EXAMPLE Media Queries for Responsive Design.
+       These examples override the primary ('mobile first') styles.
+       Modify as content requires.
+       ========================================================================== */
+
+    @media only screen and (min-width: 35em) {
+      /* Style adjustments for viewports that meet the condition */
+    }
+
+    @media print,
+    (-webkit-min-device-pixel-ratio: 1.25),
+    (min-resolution: 1.25dppx),
+    (min-resolution: 120dpi) {
+      /* Style adjustments for high resolution devices */
+    }
+
+    /* ==========================================================================
+       Print styles.
+       Inlined to avoid the additional HTTP request:
+       https://www.phpied.com/delay-loading-your-print-css/
+       ========================================================================== */
+
+    @media print {
+      *,
+      *::before,
+      *::after {
+        background: #fff !important;
+        color: #000 !important;
+        /* Black prints faster */
+        box-shadow: none !important;
+        text-shadow: none !important;
+      }
+
+      a,
+      a:visited {
+        text-decoration: underline;
+      }
+
+      a[href]::after {
+        content: " (" attr(href) ")";
+      }
+
+      abbr[title]::after {
+        content: " (" attr(title) ")";
+      }
+
+      /*
+       * Don't show links that are fragment identifiers,
+       * or use the `javascript:` pseudo protocol
+       */
+      a[href^="#"]::after,
+      a[href^="javascript:"]::after {
+        content: "";
+      }
+
+      pre {
+        white-space: pre-wrap !important;
+      }
+
+      pre,
+      blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+      }
+
+      /*
+       * Printing Tables:
+       * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+       */
+      thead {
+        display: table-header-group;
+      }
+
+      tr,
+      img {
+        page-break-inside: avoid;
+      }
+
+      p,
+      h2,
+      h3 {
+        orphans: 3;
+        widows: 3;
+      }
+
+      h2,
+      h3 {
+        page-break-after: avoid;
+      }
+    }
+
+    /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+
+    /* Document
+       ========================================================================== */
+
+    /**
+     * 1. Correct the line height in all browsers.
+     * 2. Prevent adjustments of font size after orientation changes in iOS.
+     */
+
+    html {
+      line-height: 1.15; /* 1 */
+      -webkit-text-size-adjust: 100%; /* 2 */
+    }
+
+    /* Sections
+       ========================================================================== */
+
+    /**
+     * Remove the margin in all browsers.
+     */
+
+    body {
+      margin: 0;
+    }
+
+    /**
+     * Render the `main` element consistently in IE.
+     */
+
+    main {
+      display: block;
+    }
+
+    /**
+     * Correct the font size and margin on `h1` elements within `section` and
+     * `article` contexts in Chrome, Firefox, and Safari.
+     */
+
+    h1 {
+      font-size: 2em;
+      margin: 0.67em 0;
+    }
+
+    /* Grouping content
+       ========================================================================== */
+
+    /**
+     * 1. Add the correct box sizing in Firefox.
+     * 2. Show the overflow in Edge and IE.
+     */
+
+    hr {
+      box-sizing: content-box; /* 1 */
+      height: 0; /* 1 */
+      overflow: visible; /* 2 */
+    }
+
+    /**
+     * 1. Correct the inheritance and scaling of font size in all browsers.
+     * 2. Correct the odd `em` font sizing in all browsers.
+     */
+
+    pre {
+      font-family: monospace, monospace; /* 1 */
+      font-size: 1em; /* 2 */
+    }
+
+    /* Text-level semantics
+       ========================================================================== */
+
+    /**
+     * Remove the gray background on active links in IE 10.
+     */
+
+    a {
+      background-color: transparent;
+    }
+
+    /**
+     * 1. Remove the bottom border in Chrome 57-
+     * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+     */
+
+    abbr[title] {
+      border-bottom: none; /* 1 */
+      text-decoration: underline; /* 2 */
+    }
+
+    /**
+     * Add the correct font weight in Chrome, Edge, and Safari.
+     */
+
+    b,
+    strong {
+      font-weight: bolder;
+    }
+
+    /**
+     * 1. Correct the inheritance and scaling of font size in all browsers.
+     * 2. Correct the odd `em` font sizing in all browsers.
+     */
+
+    code,
+    kbd,
+    samp {
+      font-family: monospace, monospace; /* 1 */
+      font-size: 1em; /* 2 */
+    }
+
+    /**
+     * Add the correct font size in all browsers.
+     */
+
+    small {
+      font-size: 80%;
+    }
+
+    /**
+     * Prevent `sub` and `sup` elements from affecting the line height in
+     * all browsers.
+     */
+
+    sub,
+    sup {
+      font-size: 75%;
+      line-height: 0;
+      position: relative;
+      vertical-align: baseline;
+    }
+
+    sub {
+      bottom: -0.25em;
+    }
+
+    sup {
+      top: -0.5em;
+    }
+
+    /* Embedded content
+       ========================================================================== */
+
+    /**
+     * Remove the border on images inside links in IE 10.
+     */
+
+    img {
+      border-style: none;
+    }
+
+    /* Forms
+       ========================================================================== */
+
+    /**
+     * 1. Change the font styles in all browsers.
+     * 2. Remove the margin in Firefox and Safari.
+     */
+
+    button,
+    input,
+    optgroup,
+    select,
+    textarea {
+      font-family: inherit; /* 1 */
+      font-size: 100%; /* 1 */
+      line-height: 1.15; /* 1 */
+      margin: 0; /* 2 */
+    }
+
+    /**
+     * Show the overflow in IE.
+     * 1. Show the overflow in Edge.
+     */
+
+    button,
+    input { /* 1 */
+      overflow: visible;
+    }
+
+    /**
+     * Remove the inheritance of text transform in Edge, Firefox, and IE.
+     * 1. Remove the inheritance of text transform in Firefox.
+     */
+
+    button,
+    select { /* 1 */
+      text-transform: none;
+    }
+
+    /**
+     * Correct the inability to style clickable types in iOS and Safari.
+     */
+
+    button,
+    [type="button"],
+    [type="reset"],
+    [type="submit"] {
+      -webkit-appearance: button;
+    }
+
+    /**
+     * Remove the inner border and padding in Firefox.
+     */
+
+    button::-moz-focus-inner,
+    [type="button"]::-moz-focus-inner,
+    [type="reset"]::-moz-focus-inner,
+    [type="submit"]::-moz-focus-inner {
+      border-style: none;
+      padding: 0;
+    }
+
+    /**
+     * Restore the focus styles unset by the previous rule.
+     */
+
+    button:-moz-focusring,
+    [type="button"]:-moz-focusring,
+    [type="reset"]:-moz-focusring,
+    [type="submit"]:-moz-focusring {
+      outline: 1px dotted ButtonText;
+    }
+
+    /**
+     * Correct the padding in Firefox.
+     */
+
+    fieldset {
+      padding: 0.35em 0.75em 0.625em;
+    }
+
+    /**
+     * 1. Correct the text wrapping in Edge and IE.
+     * 2. Correct the color inheritance from `fieldset` elements in IE.
+     * 3. Remove the padding so developers are not caught out when they zero out
+     *    `fieldset` elements in all browsers.
+     */
+
+    legend {
+      box-sizing: border-box; /* 1 */
+      color: inherit; /* 2 */
+      display: table; /* 1 */
+      max-width: 100%; /* 1 */
+      padding: 0; /* 3 */
+      white-space: normal; /* 1 */
+    }
+
+    /**
+     * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+     */
+
+    progress {
+      vertical-align: baseline;
+    }
+
+    /**
+     * Remove the default vertical scrollbar in IE 10+.
+     */
+
+    textarea {
+      overflow: auto;
+    }
+
+    /**
+     * 1. Add the correct box sizing in IE 10.
+     * 2. Remove the padding in IE 10.
+     */
+
+    [type="checkbox"],
+    [type="radio"] {
+      box-sizing: border-box; /* 1 */
+      padding: 0; /* 2 */
+    }
+
+    /**
+     * Correct the cursor style of increment and decrement buttons in Chrome.
+     */
+
+    [type="number"]::-webkit-inner-spin-button,
+    [type="number"]::-webkit-outer-spin-button {
+      height: auto;
+    }
+
+    /**
+     * 1. Correct the odd appearance in Chrome and Safari.
+     * 2. Correct the outline style in Safari.
+     */
+
+    [type="search"] {
+      -webkit-appearance: textfield; /* 1 */
+      outline-offset: -2px; /* 2 */
+    }
+
+    /**
+     * Remove the inner padding in Chrome and Safari on macOS.
+     */
+
+    [type="search"]::-webkit-search-decoration {
+      -webkit-appearance: none;
+    }
+
+    /**
+     * 1. Correct the inability to style clickable types in iOS and Safari.
+     * 2. Change font properties to `inherit` in Safari.
+     */
+
+    ::-webkit-file-upload-button {
+      -webkit-appearance: button; /* 1 */
+      font: inherit; /* 2 */
+    }
+
+    /* Interactive
+       ========================================================================== */
+
+    /*
+     * Add the correct display in Edge, IE 10+, and Firefox.
+     */
+
+    details {
+      display: block;
+    }
+
+    /*
+     * Add the correct display in all browsers.
+     */
+
+    summary {
+      display: list-item;
+    }
+
+    /* Misc
+       ========================================================================== */
+
+    /**
+     * Add the correct display in IE 10+.
+     */
+
+    template {
+      display: none;
+    }
+
+    /**
+     * Add the correct display in IE 10.
+     */
+
+    [hidden] {
+      display: none;
+    }
+
+  </style>
+  <meta name="theme-color" content="#fafafa">
 </head>
 
 <body>
 
 <!-- Add your site or application content here -->
-<p>Protest Creator Form</p>
 
 
-<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <img src="https://i.pinimg.com/originals/de/f6/96/def69643889ee29e232637646e839064.jpg" width="1920" height="600" class="center">
+  <div class="top-left">WHERE IS THE LOVE?</div>
 
-<div class="main-block">
-    <h1>Registration</h1>
-    <form action="http://localhost:8080/whereisthelove/protest" method="post">
-        <label for="causeInput"> Defend your Cause</label>
-        <input id="causeInput" name="cause" placeholder="your cause" required/>
-        <label for="orgInput">Support your Organization</label>
-        <input id="orgInput" name="org" placeholder="Your Organization" required/>
-        <label for="dateInput">We Stand Strong on the day</label>
-        <input id="dateInput" name="date" placeholder="the date of protest" required/>
-        <label for="locationInput"> Where is the protest at</label>
-        <input id="locationInput" name="location" placeholder="if u dont select anything it is only a virtual protest"
-               width="50"/>
-        <button type="submit" >Submit</button>
-    </form>
-</div>
+  <img src="https://cdn.theatlantic.com/thumbor/f-L8wsrwPBpBKYdNqWwXYVAsi_k=/1200x837/media/img/photo/2020/06/worldwide-protest/a01_AP20158565933151-1/original.jpg" width="400" height="200" class="top">
+
+
+  <!--<img src="img/logo.png" width="200" height="200" class="center"></img>-->
+  
+  
+
+  <!--<h1 class="title"style="transform: translate(-50%, -50%)">Where is the Love?</h1>-->
+
+  <nav>
+    <ul></ul>
+    <ul class="nav">
+
+      <li><a href="#">Home</a>
+        <ul>
+          <li><a href="#">Let's go back</a></li>
+        </ul>
+      </li>
+
+      <li><a href="#">Sign in</a>
+        <ul>
+          <li><a href="#"><p>Haven't you <p>registered yet?</p><p>What are you<p>waiting for?</p></a></li>
+          <!--<p>Haven't you registered yet? What are you waiting for?</p>-->
+        </ul>
+      </li>
+
+      <li><a href="#">Organise your protest</a>
+        <ul>
+          <li><a href="#">It's show time!</a></li>
+        </ul>
+      </li>
+
+      <li><a href="#">Donate</a>
+        <ul>
+          <li><a href="#">Our work</a></li>
+        </ul>
+      </li>
+      <li><a href="#">About us</a>
+        <ul>
+          <li><a href="#">Meet the team that made this possible!</a></li>
+        </ul>
+      </li>
+
+      <li><a href="#">Merch</a>
+        <ul>
+          <li><a href="#">Buy our<p>cool</p><p>stuff</p> </a></li>
+        </ul>
+      </li>
+
+      <li><a href="#">Contacts</a>
+        <ul>
+          <li><a href="#">Wanna reach us?</a></li>
+        </ul>
+      </li>
+
+
+    <ul></ul>
+
+    </ul>
+  </nav>
+
+  <!--<div >
+    <span class="your" style="display:inline-block;font-size:400% ;width: 40% ;margin-left: 300px; vertical-align: middle;font-family: Arial, Helvetica, sans-serif;">SUPORT YOUR CAUSE</span>
+    <img class="picture" style="display: inline;"src="img/fotoPrincipal.png" width="600" height="350"></img>
+  </div>-->
+
+  <!--<p style="text-align:center;display:inline-block;">Suport your cause</p>-->
+
+  
+  
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
 
 </body>
 
