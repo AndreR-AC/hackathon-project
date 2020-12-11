@@ -4,7 +4,6 @@ import org.academiadecodigo.bitjs.whereisthelove.controller.RestUserController;
 import org.academiadecodigo.bitjs.whereisthelove.converters.UserDtoToUser;
 import org.academiadecodigo.bitjs.whereisthelove.dtos.UserDto;
 import org.academiadecodigo.bitjs.whereisthelove.persistence.model.User;
-import org.academiadecodigo.bitjs.whereisthelove.utils.Security;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
@@ -27,17 +26,10 @@ public class UserController {
     private RestUserController restUserController;
 
     @PostMapping(path = {"","/"} )
-    public String createNewUser(@Valid @ModelAttribute UserDto userDto, BindingResult bindingResult, RedirectAttributes redirectAttributes){
+    public String createNewUser( @ModelAttribute UserDto userDto , RedirectAttributes redirectAttributes){
 
-        if(bindingResult.hasErrors()){
-            return "error";
-        }
-        updatelist();
-        userDto.setId(userLinkedList.size()+1);
-        userLinkedList.add( userDtoToUser.convert(userDto));
-        restUserController.updatelist();
-        redirectAttributes.addFlashAttribute("lastAction", "Saved " + userDto.getFirstName() + " " + userDto.getLastName());
 
+        redirectAttributes.addFlashAttribute("lastAction"," "+userDto.getFirstName()+" just logged in");
         return "redirect:/";
     }
 
@@ -45,24 +37,7 @@ public class UserController {
     public String getSignInForm(){
         return "signIn";
     }
-    @PostMapping("/login")
-    public String logIn( @ModelAttribute UserDto userDto,BindingResult bindingResult,RedirectAttributes redirectAttributes){
 
-        if (bindingResult.hasErrors()){
-            return "error";
-
-        }
-
-        redirectAttributes.addFlashAttribute("message",userDto.getFirstName() +" just logged in");
-        return "redirect:/";
-
-        /*for(User user:getUserLinkedList()){
-            if(user.getFirstName().equals(convertedUser.getFirstName()) && user.getLastName().equals(convertedUser.getLastName()) && user.getPasswordHash().equals(Security.getHash(convertedUser.getPasswordHash()))){
-
-            }
-        }*/
-
-    }
 
     public void updatelist(){
         userLinkedList = restUserController.getUserLinkedList();

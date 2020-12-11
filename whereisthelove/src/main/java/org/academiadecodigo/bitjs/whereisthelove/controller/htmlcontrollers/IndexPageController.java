@@ -10,4 +10,15 @@ public class IndexPageController {
     public String indexPageController(){
         return "index";
     }
+
+    @GetMapping(path = "/aboutus")
+    public String aboutUsPageController(){ return "aboutUs";}
+
+    @GetMapping(path = "/getbackhome")
+    public String homepageRedirect(){ return "redirect:/";}
+
+    @GetMapping(path = "/contactUs")
+    public String getContactView(){
+        return "contactUs";
+    }
 }

@@ -36,7 +36,7 @@ public class ProtestController {
         protestList.add(protestDtoToProtest.convert(protestDto));
         restProtestController.updateList();
 
-        redirectAttributes.addFlashAttribute("lastAction", "Saved " + protestDto.getCause() + " contributing to " + protestDto.getOrg());
+        redirectAttributes.addFlashAttribute("lastAction", "the protest " + protestDto.getCause() + " has been created, contributing to " + protestDto.getOrg());
         return "redirect:/";
     }
 

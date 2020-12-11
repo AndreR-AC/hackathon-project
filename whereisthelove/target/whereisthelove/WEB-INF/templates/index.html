@@ -35,7 +35,7 @@
        ========================================================================== */
 
     html {
-      background-color: cornsilk;
+      background-color: white;
       color: #222;
       font-size: 1em;
       line-height: 1.4;
@@ -57,8 +57,11 @@
 
     #flash-message{
       position: relative;
-      top: 100px;
-      background-color: darkseagreen;
+      text-align: center;
+      display: block;
+
+      margin-top: 100px;
+      background-color: white;
       font-family: Verdana, Geneva, Tahoma, sans-serif;
       align-self: center;
       font-size: 35px;
@@ -131,7 +134,7 @@
       border-bottom-color: black;
     }
     .nav li:hover > a {
-      color:red;
+      color:dimgrey;
       font-size: 80%;
     }
     .nav > li:first-child {
@@ -817,7 +820,7 @@
 
 
   <img src="https://i.imgur.com/gAQvP3R.png" width="1920" height="600" class="center">
-  <div class="top-left">WHERE IS THE LOVE?</div>
+  <div class="top-left" style="margin-top: 100px">WHERE IS THE LOVE?</div>
 
   <img src="https://i.imgur.com/r0IbnuG.png" class="top" style="width:350px; height: auto; " >
 
@@ -844,48 +847,33 @@
 
 
         <ul>
-          <li><a href="#"><p>Haven't you <p>registered yet?</p><p>What are you<p>waiting for?</p></a></li>
+          <li><a href="#"><p>Haven't you <p>Registered Yet?</p></a></li>
           <!--<p>Haven't you registered yet? What are you waiting for?</p>-->
         </ul>
       </li>
 
-      <li><a href="./protest/new">Organise your protest</a>
+      <li><a href="./protest/new">Organize your protest</a>
         <ul>
           <li><a href="#">It's show time!</a></li>
         </ul>
       </li>
 
       <li><a href="#">Donate</a>
-        <ul>
-          <li><a href="#">Our work</a></li>
-        </ul>
       </li>
-      <li><a href="#">About us</a>
+      <li><a href="./aboutus">About us</a>
         <ul>
           <li><a href="#">Meet the team that made this possible!</a></li>
         </ul>
       </li>
 
-      <li><a href="#">Merch</a>
-        <ul>
-          <li><a href="#">Buy our<p>cool</p><p>stuff</p> </a></li>
-        </ul>
+      <li><a href="./contactUs">Contacts</a>
       </li>
-
-      <li><a href="#">Contacts</a>
-        <ul>
-          <li><a href="#">Wanna reach us?</a></li>
-        </ul>
-      </li>
-
-
-
 
     </ul>
 
 
   </nav>
-  <span th:if="${!lastAction.isEmpty()}" th:text="${lastAction}" id="flash-message"></span>
+  <span th:style="'text-align:center'" th:if="${lastAction!=null}" th:text="${lastAction}" id="flash-message" ></span>
   <!--<div >
     <span class="your" style="display:inline-block;font-size:400% ;width: 40% ;margin-left: 300px; vertical-align: middle;font-family: Arial, Helvetica, sans-serif;">SUPORT YOUR CAUSE</span>
     <img class="picture" style="display: inline;"src="img/fotoPrincipal.png" width="600" height="350"></img>
