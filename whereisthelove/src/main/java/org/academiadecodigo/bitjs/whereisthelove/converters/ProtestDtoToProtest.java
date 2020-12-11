@@ -9,7 +9,7 @@ import java.util.LinkedList;
 @Component
 public class ProtestDtoToProtest extends AbstractConverter<ProtestDto, Protest> {
 
-  LinkedList protests ;
+
   @Override
   public Protest convert(ProtestDto protestDto) {
 
@@ -19,7 +19,6 @@ public class ProtestDtoToProtest extends AbstractConverter<ProtestDto, Protest> 
     protest.setLocation(protestDto.getLocation());
     protest.setLovePoints(protestDto.getLovePoints());
     protest.setOrg(protestDto.getOrg());
-    protest.setId(protests.size()+1);
     protest.setImageUrl(protestDto.getImageUrl());
 
     return protest;

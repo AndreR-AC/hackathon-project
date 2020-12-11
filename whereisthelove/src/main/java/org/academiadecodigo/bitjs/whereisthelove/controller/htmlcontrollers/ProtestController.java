@@ -1,5 +1,6 @@
 package org.academiadecodigo.bitjs.whereisthelove.controller.htmlcontrollers;
 
+import com.sun.org.apache.bcel.internal.generic.PUSH;
 import org.academiadecodigo.bitjs.whereisthelove.controller.RestProtestController;
 import org.academiadecodigo.bitjs.whereisthelove.converters.ProtestDtoToProtest;
 import org.academiadecodigo.bitjs.whereisthelove.dtos.ProtestDto;
@@ -7,6 +8,7 @@ import org.academiadecodigo.bitjs.whereisthelove.persistence.model.Protest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -35,8 +37,14 @@ public class ProtestController {
         restProtestController.updateList();
 
         redirectAttributes.addFlashAttribute("lastAction", "Saved " + protestDto.getCause() + " contributing to " + protestDto.getOrg());
-        return "index";
+        return "redirect:/";
     }
+
+    @GetMapping("/new")
+    public String getProtestForm(){
+        return "protestForm";
+    }
+
 
     public LinkedList<Protest> getProtestList() {
         return protestList;

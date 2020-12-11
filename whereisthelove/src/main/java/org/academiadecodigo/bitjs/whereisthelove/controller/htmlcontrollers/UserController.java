@@ -8,6 +8,7 @@ import org.academiadecodigo.bitjs.whereisthelove.utils.Security;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -37,23 +38,30 @@ public class UserController {
         restUserController.updatelist();
         redirectAttributes.addFlashAttribute("lastAction", "Saved " + userDto.getFirstName() + " " + userDto.getLastName());
 
-        return "index";
+        return "redirect:/";
     }
 
+    @GetMapping("/login")
+    public String getSignInForm(){
+        return "signIn";
+    }
     @PostMapping("/login")
-    public String logIn(@Valid @ModelAttribute UserDto userDto,BindingResult bindingResult,RedirectAttributes redirectAttributes){
+    public String logIn( @ModelAttribute UserDto userDto,BindingResult bindingResult,RedirectAttributes redirectAttributes){
 
         if (bindingResult.hasErrors()){
             return "error";
 
         }
-        User convertedUser=userDtoToUser.convert(userDto);
-        for(User user:getUserLinkedList()){
+
+        redirectAttributes.addFlashAttribute("message",userDto.getFirstName() +" just logged in");
+        return "redirect:/";
+
+        /*for(User user:getUserLinkedList()){
             if(user.getFirstName().equals(convertedUser.getFirstName()) && user.getLastName().equals(convertedUser.getLastName()) && user.getPasswordHash().equals(Security.getHash(convertedUser.getPasswordHash()))){
-                return "redirect:/index";
+
             }
-        }
-        return "signIn";
+        }*/
+
     }
 
     public void updatelist(){

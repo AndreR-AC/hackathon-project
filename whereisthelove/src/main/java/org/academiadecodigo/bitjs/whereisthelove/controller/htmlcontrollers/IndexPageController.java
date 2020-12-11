@@ -8,6 +8,6 @@ public class IndexPageController {
 
     @GetMapping(path = {"","/"})
     public String indexPageController(){
-        return "signIn";
+        return "index";
     }
 }
