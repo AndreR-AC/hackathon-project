@@ -4,6 +4,7 @@ org/academiadecodigo/bitjs/whereisthelove/dtos/ProtestDto.class
 org/academiadecodigo/bitjs/whereisthelove/SpringBootstrap.class
 org/academiadecodigo/bitjs/whereisthelove/converters/ProtestToDto.class
 org/academiadecodigo/bitjs/whereisthelove/controller/RestUserController.class
+org/academiadecodigo/bitjs/whereisthelove/utils/Security.class
 org/academiadecodigo/bitjs/whereisthelove/persistence/model/User.class
 org/academiadecodigo/bitjs/whereisthelove/converters/UserDtoToUser.class
 org/academiadecodigo/bitjs/whereisthelove/converters/UserToDto.class

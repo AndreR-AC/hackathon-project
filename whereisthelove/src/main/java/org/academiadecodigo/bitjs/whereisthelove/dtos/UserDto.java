@@ -27,6 +27,8 @@ public class UserDto {
   @Size(min = 8,max = 10)
   private String birthdate;
 
+  private String password;
+
 
   private Integer lovePoints;
 
@@ -70,4 +72,12 @@ public class UserDto {
   public void setLovePoints(Integer lovePoints) {
     this.lovePoints = lovePoints;
   }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
 }

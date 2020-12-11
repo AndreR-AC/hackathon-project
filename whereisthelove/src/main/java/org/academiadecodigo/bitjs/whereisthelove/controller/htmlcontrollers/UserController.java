@@ -4,6 +4,7 @@ import org.academiadecodigo.bitjs.whereisthelove.controller.RestUserController;
 import org.academiadecodigo.bitjs.whereisthelove.converters.UserDtoToUser;
 import org.academiadecodigo.bitjs.whereisthelove.dtos.UserDto;
 import org.academiadecodigo.bitjs.whereisthelove.persistence.model.User;
+import org.academiadecodigo.bitjs.whereisthelove.utils.Security;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
@@ -38,6 +39,23 @@ public class UserController {
 
         return "index";
     }
+
+    @PostMapping("/login")
+    public String logIn(@Valid @ModelAttribute UserDto userDto,BindingResult bindingResult,RedirectAttributes redirectAttributes){
+
+        if (bindingResult.hasErrors()){
+            return "error";
+
+        }
+        User convertedUser=userDtoToUser.convert(userDto);
+        for(User user:getUserLinkedList()){
+            if(user.getFirstName().equals(convertedUser.getFirstName()) && user.getLastName().equals(convertedUser.getLastName()) && user.getPasswordHash().equals(Security.getHash(convertedUser.getPasswordHash()))){
+                return "redirect:/index";
+            }
+        }
+        return "signIn";
+    }
+
     public void updatelist(){
         userLinkedList = restUserController.getUserLinkedList();
     }
